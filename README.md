@@ -43,5 +43,7 @@ RocketRelay se basa en los siguientes componentes:
                
 # Licencia
 
-Hardware License: CERN-OHL-S v2
-Software License: GPL-3.0
+Hardware License: CERN-OHL-S v2.
+
+Software License: GPL-3.0.
+
