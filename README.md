@@ -40,6 +40,10 @@ RocketRelay se basa en los siguientes componentes:
 | DC       |  GPIO 19  |
 | SDA       |  GPIO 23  |
 | SCL      |  GPIO 18  |
+
+## Imágenes
+  <img src="images/Fv1.jpg" alt="Parte frontal de la PCB" width="250"/>
+
                
 # Licencia
 
