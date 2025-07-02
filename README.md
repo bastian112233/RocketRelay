@@ -1,60 +1,128 @@
-# RocketRelay
-RocketRelay es una plataforma de automatización doméstica basada en ESP32, diseñada para controlar hasta cuatro relés mediante mensajes MQTT y visualizar datos ambientales en una pantalla circular TFT. El sistema integra un sensor BME680 para medir temperatura, humedad, presión y calidad del aire, y un sensor de corriente SCT-013 para monitorear el consumo eléctrico. La interfaz de usuario incluye una animación de inicio, indicadores visuales con Neopixels y un panel de control remoto usando Node-RED.
+# 🚀 RocketRelay
 
-RocketRelay recibe comandos vía MQTT para activar o desactivar relés de manera individual y también publica de forma periódica los datos de los sensores. Cuando se recibe un mensaje específico, el sistema despliega los datos del sensor correspondiente en la pantalla. Además, el proyecto incluye lógica visual con colores para advertencias o actividad de sensores, y está diseñado con arquitectura no bloqueante para asegurar una respuesta rápida en todo momento.
+**RocketRelay** es una plataforma de automatización doméstica basada en **ESP32**, diseñada para controlar hasta **cuatro relés AC** mediante **MQTT** y visualizar datos ambientales en una pantalla circular **TFT**.
 
-RocketRelay se basa en los siguientes componentes:
+El sistema incluye:
 
-- ESP32
-- Relés
-- Sensor BME680
-- Sensor SCT-013
-- Neopixel
-- Pantalla Circular TFT
+- Control remoto de cargas AC mediante **relés**.
+- Monitoreo ambiental con sensor **BME680** (temperatura, humedad, presión y gas).
+- Medición de consumo eléctrico con **SCT-013**.
+- Indicadores visuales con **Neopixels**.
+- Interfaz local en **pantalla TFT** y control remoto vía **Node-RED** y **bot de Telegram**.
+- Todo integrado en un **shield personalizado**, certificado como **hardware libre** por OSHWA.
 
-# Descripción de pines 
+---
 
-### Control de Relés
+## 📦 Características principales
+
+- ✅ Control de hasta 4 relés AC individualmente.
+- 📡 Publicación periódica de datos vía MQTT.
+- 📊 Visualización local en pantalla circular TFT.
+- 🤖 Interacción remota mediante **bot de Telegram** con botones inline.
+- 🟢 Indicadores visuales con Neopixels para actividad y alertas.
+- 🧠 Arquitectura no bloqueante: respuesta rápida y estable.
+- 🪛 Diseño compacto con PCB personalizado.
+
+---
+
+## 🧰 Componentes principales
+
+| Componente       | Función                              |
+|------------------|---------------------------------------|
+| ESP32            | Microcontrolador principal            |
+| 4 Relés AC       | Control de cargas eléctricas          |
+| Sensor BME680    | Datos ambientales                     |
+| Sensor SCT-013   | Medición de corriente                 |
+| Neopixels        | Indicadores visuales (estado, alerta) |
+| Pantalla TFT     | Visualización local                   |
+
+---
+
+## 🔌 Asignación de Pines
+
+### 🧲 Relés
 
 | Relé   | GPIO |
-| :---   | :---: |
-| 1      | GPIO 26|
-| 2      | GPIO 25|
-| 3      | GPIO 33|
-| 4      | GPIO 27|
+|--------|------|
+| R1     | 26   |
+| R2     | 25   |
+| R3     | 33   |
+| R4     | 27   |
 
-### Sensor BME680 y Sensor SCT-013 
+### 🌫️ Sensor BME680 y ⚡ SCT-013
 
-|Sensor   | GPIO |
-| :---         |    :---:|
-| BME680       |  GPIO 21 (SDA)  |
-| BME680       |  GPIO 22 (SCL)  |
-| SCT-013       |  GPIO 34 (ADC)  |
+| Sensor       | GPIO      |
+|--------------|-----------|
+| BME680 SDA   | GPIO 21   |
+| BME680 SCL   | GPIO 22   |
+| SCT-013 (ADC)| GPIO 34   |
 
-### Pantalla Circular TFT 
+### 🖥️ Pantalla Circular TFT
 
-|GPIO   | Función |
-| :---         |    :---:|
-| RST       |  GPIO 4  |
-| CS      |  GPIO 5  |
-| DC       |  GPIO 19  |
-| SDA       |  GPIO 23  |
-| SCL      |  GPIO 18  |
+| Función | GPIO |
+|---------|------|
+| RST     | 4    |
+| CS      | 5    |
+| DC      | 19   |
+| SDA     | 23   |
+| SCL     | 18   |
 
-## Imágenes
-  <img src="images/Fv1.jpg" width="250"/>
-  <img src="images/Bv1.jpg" width="250"/>
-  <img src="images/eDv1.jpg" width="450"/>
+---
 
-               
-# Licencia
+## 🖨️ Diseño de PCB
 
-Hardware License: CERN-OHL-S v2.
+| Vista frontal | Vista trasera | PCB ensamblada |
+|---------------|---------------|----------------|
+| <img src="images/Fv1.jpg" width="250"/> | <img src="images/Bv1.jpg" width="250"/> | <img src="images/eDv1.jpg" width="450"/> |
 
-Software License: GPL-3.0.
+---
 
-## OSHW Certificación
-<img src="images/certification-mark-GT000022-stacked.png" width="250"/>
-<img src="images/certification-mark-GT000022-wide.png" width="250"/>
+## 🧪 Cómo usar
 
+1. Clona el repositorio.
+2. Carga el firmware en tu ESP32.
+3. Conecta los sensores, pantalla y relés según el diagrama de pines.
+4. Configura tu broker MQTT y WiFi.
+5. Ejecuta el archivo `bot.js` en Node.js para habilitar el bot de Telegram.
+6. Controla todo desde tu teléfono o una interfaz Node-RED.
+
+<!-- Puedes agregar aquí enlaces al .ino y al bot.js si están en carpetas específicas -->
+
+---
+
+## 🧾 Licencias
+
+- **Hardware License**: [CERN-OHL-S v2](https://ohwr.org/project/cernohl/wikis/Documents/CERN-OHL-version-2)
+- **Software License**: [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html)
+
+---
+
+## 📜 Certificación OSHW
+
+Este proyecto está certificado como **hardware libre abierto** por la **Open Source Hardware Association (OSHWA)**.
+
+ID de certificación: **GT000022**
+
+| Marca vertical | Marca horizontal |
+|----------------|------------------|
+| <img src="images/certification-mark-GT000022-stacked.png" width="200"/> | <img src="images/certification-mark-GT000022-wide.png" width="300"/> |
+
+Ver en el [Directorio oficial OSHWA](https://certification.oshwa.org/gt000022.html)
+
+---
+
+## 🙌 Agradecimientos
+
+Gracias a la comunidad de código abierto, OSHWA, y todas las personas que contribuyeron al ecosistema de ESP32, MQTT y Node.js.  
+Este proyecto fue desarrollado con fines educativos y como una herramienta de acceso abierto para entornos de automatización.
+
+---
+
+## 📬 Contacto
+
+Si deseas contribuir o tienes dudas, puedes abrir un issue o contactarme directamente.
+
+---
+
+🎉 ¡Gracias por usar RocketRelay!
 
