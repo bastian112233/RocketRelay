@@ -73,7 +73,7 @@ El sistema incluye:
 
 | Vista frontal | Vista trasera | PCB ensamblada |
 |---------------|---------------|----------------|
-| <img src="images/Fv1.jpg" width="250"/> | <img src="images/Bv1.jpg" width="250"/> | <img src="images/eDv1.jpg" width="450"/> |
+| <img src="images/Fv1.jpg" width="350"/> | <img src="images/Bv1.jpg" width="350"/> | <img src="images/eDv1.jpg" width="350"/> |
 
 ---
 
@@ -86,7 +86,6 @@ El sistema incluye:
 5. Ejecuta el archivo `bot.js` en Node.js para habilitar el bot de Telegram.
 6. Controla todo desde tu teléfono o una interfaz Node-RED.
 
-<!-- Puedes agregar aquí enlaces al .ino y al bot.js si están en carpetas específicas -->
 
 ---
 
@@ -120,7 +119,8 @@ Este proyecto fue desarrollado con fines educativos y como una herramienta de ac
 
 ## 📬 Contacto
 
-Si deseas contribuir o tienes dudas, puedes abrir un issue o contactarme directamente.
+Si deseas contribuir o tienes dudas, puedes contactarme directamente.
+sebastian.rivas@galileo.edu
 
 ---
 
