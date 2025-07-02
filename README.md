@@ -53,5 +53,8 @@ Hardware License: CERN-OHL-S v2.
 
 Software License: GPL-3.0.
 
-## Imágenes
+## OSHW Certificación
+<img src="images/certification-mark-GT000022-stacked.png" width="250"/>
+<img src="images/certification-mark-GT000022-wide.png" width="250"/>
+
 
