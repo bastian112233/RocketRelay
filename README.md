@@ -53,3 +53,5 @@ Hardware License: CERN-OHL-S v2.
 
 Software License: GPL-3.0.
 
+## Imágenes
+
